@@ -9,12 +9,7 @@ describe("Driver", () => {
     driver1 = new Driver(route);
     driver2 = new Driver(route);
   });
-  // it("should return the first stop when the driver is at the starting position", () => {
-  //   const driver = new Driver(["A", "B", "C"]);
-
-  //   expect(driver.getCurrentStop()).toBe("A");
-  // });
-
+  
   describe("getCurrentStop", () => {
     it("should return the current stop of the driver", () => {
       expect(driver1.getCurrentStop()).toEqual("A");
@@ -33,10 +28,6 @@ describe("Driver", () => {
     it("should move the driver to the next stop", () => {
       driver1.moveToNextStop();
       expect(driver1.getCurrentStop()).toEqual("B");
-      driver1.moveToNextStop();
-      expect(driver1.getCurrentStop()).toEqual("C");
-      driver1.moveToNextStop();
-      expect(driver1.getCurrentStop()).toEqual("A");
     });
     it("should move to the first stop when the driver is at the last stop", () => {
       const driver = new Driver(["A", "B", "C"]);

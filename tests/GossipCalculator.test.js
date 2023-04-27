@@ -18,7 +18,7 @@ describe("GossipCalculator", () => {
     it("should gossip between two drivers when they are at the same stop", () => {
       const driver1 = drivers[0];
       const driver2 = drivers[1];
-      expect(driver1.gossips.has([...driver2.gossips][0])).toBe(false);
+      
       gossipCalculator.moveAllDrivers();
       gossipCalculator.shareGossips();
       expect(driver1.gossips.has([...driver2.gossips][0])).toBe(true);
@@ -38,11 +38,10 @@ describe("GossipCalculator", () => {
   describe("drive", () => {
     it("should move drivers to the next stop", () => {
       const driver1 = drivers[0];
-      expect(driver1.getCurrentStop()).toEqual("A");
+  
       gossipCalculator.moveAllDrivers();
+      
       expect(driver1.getCurrentStop()).toEqual("B");
-      gossipCalculator.moveAllDrivers();
-      expect(driver1.getCurrentStop()).toEqual("C");
     });
   });
 

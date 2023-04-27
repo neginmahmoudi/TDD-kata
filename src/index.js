@@ -1,5 +1,5 @@
-import Driver from '../../classes/Driver.js';
-import GossipCalculator from '../../classes/GossipCalculator.js';
+import Driver from '../classes/Driver.js';
+import GossipCalculator from '../classes/GossipCalculator.js';
 
 const drivers = [
   new Driver([3, 1, 2, 3]),
