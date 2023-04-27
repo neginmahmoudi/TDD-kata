@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "gossiping-kata-negin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-jest": "24.9.0",
+    "babel-polyfill": "6.26.0",
+    "@babel/preset-env": "7.16.11",
+    "jest": "^29.5.0"
+  }
+}
